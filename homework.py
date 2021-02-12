@@ -1,5 +1,32 @@
 import pandas as pd
 
+def arra(array):
+    array = [[1,2,3,4],
+             [4,5,6,5],
+             [0,8,9,6],
+             [7,8,9,6]]
+    n = len(array)
+    x = 0
+    y = 1
+    res = []
+
+    for i in range(n//2): #zad
+        print (round(n-1)/2)
+        for j in range(n-x):
+            res.append(array[x][j])
+        for j in range(y,n):
+            res.append(array[j][n-1-x])
+        for j in range(n-1-x, x, -1):
+            res.append(array[n-1-x][j-x-1])
+        for j in range(n-1-x, y, -1):
+            res.append(array[n-j-x][x])
+        x += 1
+        y += 1
+    if n %2 !=0:
+        res.append(array[n//2][n//2])
+    print (res)
+
+
 
 def pathfinder_scores(scores):
     try:
@@ -7,7 +34,7 @@ def pathfinder_scores(scores):
         return sum([score_dict[i] for i in scores]) <=25
     except:
         return False
-    
+
 
 def homework():
     dataset = pd.read_csv('football.csv')
