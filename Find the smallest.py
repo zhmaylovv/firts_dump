@@ -15,7 +15,34 @@ testing(269045, [26945, 3, 0]);
 testing(296837, [239687, 4, 1]);
 testing(403287943124548279, [32487943124548279, 0, 3]);
 '''
+import copy
+def smallest(n):
+    '''
+    n - int
+    Перемещает одну цифру так что бы число получилось наименьшим
+    return - list [число, индекс перемещаемой цифры, индекс куда перемещается ]
+    '''
 
+    result = [n, 0, 0]
+    lst = [int(i) for i in str(n)] #переводим цифру в список
+    for i in range(len(lst)):
+        for j in range(len(lst)):
+            changed_lst = copy.deepcopy(lst) #глубокая копия
+            changed_lst.insert(j, changed_lst.pop(i)) #смещаем цифру
+            dig = int(''.join([str(i) for i in changed_lst])) #делаем из списка число
+            if dig < result[0]: # проверяем размер и сохраняем
+                result = [dig, i, j]
+    return(result)
+
+print(smallest(935855753))
+        
+
+
+
+
+
+'''
+#видимо тупиковый путь выбирать ифами разные условия-алгоритмы перемещения цифры
 
 def smallest(n):
 
@@ -55,3 +82,4 @@ def smallest(n):
     if c == 0 and removeitem_index == 2:
         removeitem_index, c = 1, 1
     return [int(''.join([str(i) for i in lst])), removeitem_index-1, c]
+'''
