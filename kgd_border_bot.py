@@ -10,7 +10,7 @@ from telebot import types
 import json
 from time import sleep
 from time import time
-bot = telebot.TeleBot("997239913:AAFNfrvsxKauVxcNC45MiCIab07B6eRc-L8")
+bot = telebot.TeleBot("***")
 count_req = int(0)
 
 
@@ -126,16 +126,3 @@ def snd_msg (message, chat_id):
 if __name__ == '__main__':
 
     app.run()
-
-
-
-
-
-#bot.set_webhook('spot14hp.pythonanywhere.com', max_connections=100)
-    #https://api.telegram.org/bot1015496489:AAEg1K-CxDEuP2s-umoGb-V0hNCx6s1_5vU/setWebhook?url=https://88b80992.ngrok.io/
-    #'https://api.telegram.org/bot1015496489:AAEg1K-CxDEuP2s-umoGb-V0hNCx6s1_5vU/setWebhook?url=https://7bcf9018.ngrok.io'
-    #print('bot_start')
-
-#bot.set_webhook('spot14hp.pythonanywhere.com', max_connections=100)
-    #https://api.telegram.org/bot1015496489:AAEg1K-CxDEuP2s-umoGb-V0hNCx6s1_5vU/setWebhook?url=spot14hp.pythonanywhere.com
-    #print('bot_start')
