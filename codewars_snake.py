@@ -1,5 +1,8 @@
 '''
 https://www.codewars.com/kata/534e01fbbb17187c7e0000c6/train/python
+
+Make a spiral
+
 Your task, is to create a NxN spiral with a given size.
 
 For example, spiral with size 5 should look like this:
